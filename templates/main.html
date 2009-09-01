@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if user %}
+<h2>Your CronHooks:</h2>
+<table class="hooks" cellspacing="0">
+<tr>	
+<th>Name</th><th>Interval</th><th>URL</th><th>&nbsp;</th>
+</tr>	
+{% for hook in hooks %}
+<tr>	
+<td class="int"><b>{{ hook }}</b></td>	
+<td class="int">{{ hook.interval }}</td>	
+<td>{{ hook.hook_url }}</td>
+<td><form style="display:inline;" action="/" method="post"><input type="hidden" name="name" value="{{ hook.name }}" /><input type="submit" value="Delete" /></form></td>
+</tr>	
+{% endfor %}
+<table>
+      
+<h2>New CronHook:<h2>
+<form action="/" method="post">
+<fieldset>
+<label>Interval(min):
+<select name="interval">
+{% if admin %}
+<option>1</option>	
+{% endif %}
+<option selected="selected">5</option>	
+<option>10</option>	
+<option>30</option>	
+<option>60</option>	
+</select>
+</label>	
+<label>Web URL: <input type="text" name="hook_url" /></label>
+</fieldset>
+<input type="submit" value="Create CronHook" />
+</form>
+{% else %}
+<p>CronHooks is unix cron-like service, calling remote  <a href="http://webhooks.org">webhooks</a> every x (x=1,5,10,30,60) minutes. Only the site admins can have 1 minute cronjobs. Fill free to install <a href="http://github.com/zh/cronhooks/">your own site</a>.</p>
+<p>Expired by <a href="http://twitter.com/progrium">progrium</a>'s <a href="http://www.clickhooks.com/">ClickHooks</a> and <a href="http://www.mailhooks.com/">MailHooks</a>.</p>
+<h2 align="center"><a href="{{ login_url }}">Login</a></h2>
+{% endif %}
+{% endblock %}

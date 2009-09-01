@@ -1,0 +1,46 @@
+body { font-family: Helvetica,Arial,sans-serif; font-size: smaller;}
+#header h1 { display: block; margin: 0;}
+#header { 
+  border-bottom: 2px solid #333; 
+  padding: 5px; 
+  padding-bottom: 1px; 
+  background-color: #666;
+  color: #fff;}
+#wrapper { margin-left: auto; margin-right: auto; width: 800px;}
+#content { margin: 10px; }
+pre { font-size: larger;}
+ul { padding-left: 20px;}
+#make-form { margin: 20px; text-align: center; margin-right: 80px;}
+#make-form input { font-size: larger;}
+#footer {
+  margin-top: 20px;
+  border-top: 1px solid darkblue;
+  background-color: lightblue;
+  padding: 5px;
+  padding-left: 10px;
+}
+#footer a:visited { color: blue;}
+
+table.hooks {
+  width: 100%;
+  background-color: #666;
+  border: 0px;
+  border-collapse: collapse;
+  border-spacing: 0px;}
+
+table.hooks td {
+  background-color: #ccc;
+  color: #000;
+  padding: 4px;
+  text-align: left;
+  border: 1px #fff solid;}
+
+table.hooks td.int { text-align: center;}
+
+
+table.hooks th {
+  background-color: #666;
+  color: #fff;
+  padding: 4px;
+  text-align: center;
+  border-bottom: 2px #fff solid;}
