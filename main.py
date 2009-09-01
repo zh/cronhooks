@@ -51,8 +51,7 @@ class MainHandler(webapp.RequestHandler):
             # only admins can have 1 min cronjobs
             if not admin and interval == 1:
               self.redirect('/')
-            h = CronHook(interval,
-                         hook_url=self.request.POST['hook_url'])
+            h = CronHook(interval=interval, hook_url=self.request.POST['hook_url'])
             h.put()
         self.redirect('/')
 
