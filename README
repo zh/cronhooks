@@ -1,0 +1,19 @@
+CronHooks
+==========
+
+CronHooks is UNIX cron-like service, calling remote webhooks every x (x=1,5,10,30,60) 
+minutes.
+
+
+Usage
+-------
+
+Only the site admins can have 1 minute cronjobs.
+
+When some webhook is called via POST, it receiving the following parameters 
+(x-www-form-urlencoded):
+
+  - hook.name - when added, every webhook receiving an uniq ID. 
+                it can be used for authentication.
+  - hook.interval - to which cronjob the webhooks belongs (1,5,10,30,60)
+  - hook.time - time, when the webhooks is called - format: %Y-%m-%dT%H:%M:%SZ
