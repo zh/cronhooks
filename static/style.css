@@ -1,39 +1,86 @@
-body { font-family: Helvetica,Arial,sans-serif; font-size: smaller;}
-#header h1 { display: block; margin: 0;}
-#header { 
-  border-bottom: 2px solid #333; 
-  padding: 5px; 
-  padding-bottom: 1px; 
-  background-color: #666;
-  color: #fff;}
-#wrapper { margin-left: auto; margin-right: auto; width: 800px;}
-#content { margin: 10px; }
-pre { font-size: larger;}
-ul { padding-left: 20px;}
-#make-form { margin: 20px; text-align: center; margin-right: 80px;}
-#make-form input { font-size: larger;}
-#footer {
-  margin-top: 20px;
-  border-top: 1px solid darkblue;
-  background-color: lightblue;
+body {
+  background: white;
+  color: black;
+  margin: 15px;
+  margin-top: 0;
+  font-family: Georgia, serif;
+}
+
+body,
+input,
+textarea {
+  font-size: 10pt;
+}
+
+table {
+  border-collapse: collapse;
+  border: 0;
+}
+
+td {
+  border: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 16pt;
+}
+
+#wrapper {
+  max-width: 800px;
+  margin: auto;
+}
+
+#header {
+  background-color: black;
   padding: 5px;
   padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 1em;
 }
-#footer a:visited { color: blue;}
+
+#header,
+#header a {
+  color: white;
+}
+
+#header h1 a {
+  text-decoration: none;
+}
+
+#footer,
+#content {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#footer {
+  margin-top: 3em;
+  text-align: center;
+}
 
 table.hooks {
   width: 100%;
   background-color: #666;
   border: 0px;
   border-collapse: collapse;
-  border-spacing: 0px;}
+  border-spacing: 0px;
+}
 
 table.hooks td {
   background-color: #ccc;
   color: #000;
   padding: 4px;
   text-align: left;
-  border: 1px #fff solid;}
+  border: 1px #fff solid;
+}
 
 table.hooks td.int { text-align: center;}
 
@@ -43,4 +90,5 @@ table.hooks th {
   color: #fff;
   padding: 4px;
   text-align: center;
-  border-bottom: 2px #fff solid;}
+  border-bottom: 2px #fff solid;
+}
